@@ -1,0 +1,398 @@
+// GOOGLE FONTS
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+// VARIABLES
+// Colors
+// primary colors
+$header: hsl(246, 80%, 60%);
+$work: hsl(15, 100%, 70%);
+$play: hsl(195, 74%, 62%);
+$study: hsl(348, 100%, 68%);
+$exercise: hsl(145, 58%, 55%);
+$social: hsl(264, 64%, 52%);
+$selfcare: hsl(43, 84%, 65%);
+// neutral colors
+$very_dark_blue: hsl(226, 43%, 10%);
+$dark_blue: hsl(235, 46%, 20%);
+$desaturated_blue: hsl(235, 45%, 61%);
+$pale_blue: hsl(236, 100%, 87%);
+$white: #fff;
+// Typography
+// font-family
+$ff: "Rubik", sans-serif;
+// font-weight
+$fw_light: 300;
+$fw_regular: 400;
+$fw_medium: 500;
+// font-size
+$fs_card_titles: 1.125rem;
+// Breakpoints
+$mobile: 640px;
+$tablet: 768px;
+$xl_tablet: 960px;
+$desktop: 1024px;
+// RESET
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+// STYLES (Mobile first)
+body {
+  display: grid;
+  place-items: center;
+  font-family: $ff;
+  background-color: $very_dark_blue;
+  color: $white;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 20.625rem;
+  grid-auto-rows: max-content; // Each row will take as much height as it requires
+  gap: 1.5rem;
+  padding: 3rem 0;
+  @media screen and (min-width: $mobile) {
+    grid-template-areas:
+      "id id"
+      "work play"
+      "study exercise"
+      "social selfcare";
+    grid-template-columns: repeat(2, 18.75rem);
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 69.375rem;
+    grid-template-areas:
+      "id work play study"
+      "id exercise social selfcare";
+    grid-template-columns: repeat(4, 15.938rem);
+    gap: 1.875rem;
+    padding: 0;
+  }
+}
+
+.id,
+.grid-item {
+  background-color: $dark_blue;
+  border-radius: 13px;
+  width: 100%;
+}
+
+.id {
+  @media screen and (min-width: $mobile) {
+    grid-area: id;
+  }
+  @media screen and (min-width: $desktop) {
+    grid-area: id;
+    height: 100%;
+  }
+}
+
+.id > header {
+  background-color: $header;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.875rem;
+  img {
+    border: solid $white 2px;
+    border-radius: 50%;
+  }
+  h1 {
+    font-weight: $fw_light;
+    font-size: clamp(1.5rem, 2vw + 1rem, 5rem);
+    span {
+      display: block;
+      font-size: 1rem;
+      color: $pale_blue;
+      line-height: 1.6;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+
+.id > nav {
+  padding: 1.563rem 1.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  button {
+    color: $pale_blue;
+    font-size: 1rem;
+    &:hover {
+      color: $white;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: 95% -1rem;
+  border-radius: 13px;
+  padding-top: 2rem;
+}
+
+.work {
+  background-color: $work;
+  background-image: url(../images/icon-work.svg);
+  @media screen and (min-width: $desktop) {
+    grid-area: work;
+  }
+}
+
+.play {
+  background-color: $play;
+  background-image: url(../images/icon-play.svg);
+  @media screen and (min-width: $desktop) {
+    grid-area: play;
+  }
+}
+
+.study {
+  background-color: $study;
+  background-image: url(../images/icon-study.svg);
+  @media screen and (min-width: $desktop) {
+    grid-area: study;
+  }
+}
+
+.exercise {
+  background-color: $exercise;
+  background-image: url(../images/icon-exercise.svg);
+  @media screen and (min-width: $desktop) {
+    grid-area: exercise;
+  }
+}
+
+.social {
+  background-color: $social;
+  background-image: url(../images/icon-social.svg);
+  @media screen and (min-width: $desktop) {
+    grid-area: social;
+  }
+}
+
+.selfcare {
+  background-color: $selfcare;
+  background-image: url(../images/icon-self-care.svg);
+  @media screen and (min-width: $desktop) {
+    grid-area: selfcare;
+  }
+}
+
+.stats-card {
+  background-color: $dark_blue;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.875rem 1.563rem;
+  cursor: pointer;
+  &:hover {
+    background-color: $desaturated_blue;
+  }
+  @media screen and (min-width: $desktop) {
+    gap: 1rem;
+  }
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &::after {
+    content: url(../images/icon-ellipsis.svg);
+    cursor: pointer;
+  }
+  &:hover:after {
+    content: url(../images/icon-ellipsis-hover.svg);
+  }
+  h2 {
+    font-size: $fs_card_titles;
+    font-weight: $fw_medium;
+  }
+}
+
+.time-tracker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p:nth-child(1) {
+    font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
+    font-weight: $fw_light;
+  }
+  p:nth-child(2) {
+    font-size: 0.95rem;
+    font-weight: $fw_light;
+    color: $pale_blue;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.4rem;
+  }
+}
+
+footer {
+  bottom: 0;
+  a {
+    color: $pale_blue;
+  }
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+  }
+}
+
+/*
+ <!-- WORK -->
+      <section class="grid-item icon work">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Work</h2>
+          </div>
+          <div class="time-tracker">
+            <p>32hrs</p>
+            <p>Last week - 36hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- PLAY -->
+      <section class="grid-item icon play">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Play</h2>
+          </div>
+          <div class="time-tracker">
+            <p>10hrs</p>
+            <p>Last week - 8hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- STUDY -->
+      <section class="grid-item icon study">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Study</h2>
+          </div>
+          <div class="time-tracker">
+            <p>4hrs</p>
+            <p>Last week - 7hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- EXERCISE -->
+      <section class="grid-item icon exercise">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Exercise</h2>
+          </div>
+          <div class="time-tracker">
+            <p>4hrs</p>
+            <p>Last week - 5hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- SOCIAL -->
+      <section class="grid-item icon social">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Social</h2>
+          </div>
+          <div class="time-tracker">
+            <p>5hrs</p>
+            <p>Last week - 10hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- SELF CARE -->
+      <section class="grid-item icon selfcare">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Self Care</h2>
+          </div>
+          <div class="time-tracker">
+            <p>2hrs</p>
+            <p>Last week - 2hrs</p>
+          </div>
+        </div>
+      </section>
+*/
+
+/*
+ <div class="activity_bg">
+    <img src="./images/icon-${activityClass}.svg" alt="" />
+  </div>
+  <div class="activity_info">
+    <!-- Header -->
+    <header class="activity_header">
+      <h2 class="activity_name">${name}</h2>
+      <div class="activity_options">
+        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+            fill="#BBC0FF"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- Times frames -->
+    <div class="activity_timeframes">
+      <h3 class="activity_current-timeframe">${timeframeData.current}hrs</h3>
+    </div>
+    <div class="activity_previous-timeframe">
+      <p class="time-window">${previousTimeframe}</p>
+      <p>-</p>
+      <p class="time">${timeframeData.previous}hrs</p>
+    </div>
+  </div>
+*/

@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226deg, 43%, 10%);
+  color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 20.625rem;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  gap: 1.5rem;
+  padding: 3rem 0;
+}
+@media screen and (min-width: 640px) {
+  .grid-container {
+    grid-template-areas: "id id" "work play" "study exercise" "social selfcare";
+    grid-template-columns: repeat(2, 18.75rem);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    max-width: 69.375rem;
+    grid-template-areas: "id work play study" "id exercise social selfcare";
+    grid-template-columns: repeat(4, 15.938rem);
+    gap: 1.875rem;
+    padding: 0;
+  }
+}
+
+.id,
+.grid-item {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 13px;
+  width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .id {
+    grid-area: id;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .id {
+    grid-area: id;
+    height: 100%;
+  }
+}
+
+.id > header {
+  background-color: hsl(246deg, 80%, 60%);
+  border-radius: 13px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.875rem;
+}
+.id > header img {
+  border: solid #fff 2px;
+  border-radius: 50%;
+}
+.id > header h1 {
+  font-weight: 300;
+  font-size: clamp(1.5rem, 2vw + 1rem, 5rem);
+}
+.id > header h1 span {
+  display: block;
+  font-size: 1rem;
+  color: hsl(236deg, 100%, 87%);
+  line-height: 1.6;
+}
+@media screen and (min-width: 1024px) {
+  .id > header {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+
+.id > nav {
+  padding: 1.563rem 1.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.id > nav button {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 1rem;
+}
+.id > nav button:hover {
+  color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .id > nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-position: 95% -1rem;
+  border-radius: 13px;
+  padding-top: 2rem;
+}
+
+.work {
+  background-color: hsl(15deg, 100%, 70%);
+  background-image: url(../images/icon-work.svg);
+}
+@media screen and (min-width: 1024px) {
+  .work {
+    grid-area: work;
+  }
+}
+
+.play {
+  background-color: hsl(195deg, 74%, 62%);
+  background-image: url(../images/icon-play.svg);
+}
+@media screen and (min-width: 1024px) {
+  .play {
+    grid-area: play;
+  }
+}
+
+.study {
+  background-color: hsl(348deg, 100%, 68%);
+  background-image: url(../images/icon-study.svg);
+}
+@media screen and (min-width: 1024px) {
+  .study {
+    grid-area: study;
+  }
+}
+
+.exercise {
+  background-color: hsl(145deg, 58%, 55%);
+  background-image: url(../images/icon-exercise.svg);
+}
+@media screen and (min-width: 1024px) {
+  .exercise {
+    grid-area: exercise;
+  }
+}
+
+.social {
+  background-color: hsl(264deg, 64%, 52%);
+  background-image: url(../images/icon-social.svg);
+}
+@media screen and (min-width: 1024px) {
+  .social {
+    grid-area: social;
+  }
+}
+
+.selfcare {
+  background-color: hsl(43deg, 84%, 65%);
+  background-image: url(../images/icon-self-care.svg);
+}
+@media screen and (min-width: 1024px) {
+  .selfcare {
+    grid-area: selfcare;
+  }
+}
+
+.stats-card {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.875rem 1.563rem;
+  cursor: pointer;
+}
+.stats-card:hover {
+  background-color: hsl(235deg, 45%, 61%);
+}
+@media screen and (min-width: 1024px) {
+  .stats-card {
+    gap: 1rem;
+  }
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.category::after {
+  content: url(../images/icon-ellipsis.svg);
+  cursor: pointer;
+}
+.category:hover:after {
+  content: url(../images/icon-ellipsis-hover.svg);
+}
+.category h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.time-tracker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time-tracker p:nth-child(1) {
+  font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
+  font-weight: 300;
+}
+.time-tracker p:nth-child(2) {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: hsl(236deg, 100%, 87%);
+}
+@media screen and (min-width: 1024px) {
+  .time-tracker {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.4rem;
+  }
+}
+
+footer {
+  bottom: 0;
+}
+footer a {
+  color: hsl(236deg, 100%, 87%);
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    position: absolute;
+  }
+}
+
+/*
+ <!-- WORK -->
+      <section class="grid-item icon work">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Work</h2>
+          </div>
+          <div class="time-tracker">
+            <p>32hrs</p>
+            <p>Last week - 36hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- PLAY -->
+      <section class="grid-item icon play">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Play</h2>
+          </div>
+          <div class="time-tracker">
+            <p>10hrs</p>
+            <p>Last week - 8hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- STUDY -->
+      <section class="grid-item icon study">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Study</h2>
+          </div>
+          <div class="time-tracker">
+            <p>4hrs</p>
+            <p>Last week - 7hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- EXERCISE -->
+      <section class="grid-item icon exercise">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Exercise</h2>
+          </div>
+          <div class="time-tracker">
+            <p>4hrs</p>
+            <p>Last week - 5hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- SOCIAL -->
+      <section class="grid-item icon social">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Social</h2>
+          </div>
+          <div class="time-tracker">
+            <p>5hrs</p>
+            <p>Last week - 10hrs</p>
+          </div>
+        </div>
+      </section>
+      <!-- SELF CARE -->
+      <section class="grid-item icon selfcare">
+        <div class="stats-card">
+          <div class="category">
+            <h2>Self Care</h2>
+          </div>
+          <div class="time-tracker">
+            <p>2hrs</p>
+            <p>Last week - 2hrs</p>
+          </div>
+        </div>
+      </section>
+*/
+/*
+ <div class="activity_bg">
+    <img src="./images/icon-${activityClass}.svg" alt="" />
+  </div>
+  <div class="activity_info">
+    <!-- Header -->
+    <header class="activity_header">
+      <h2 class="activity_name">${name}</h2>
+      <div class="activity_options">
+        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+            fill="#BBC0FF"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- Times frames -->
+    <div class="activity_timeframes">
+      <h3 class="activity_current-timeframe">${timeframeData.current}hrs</h3>
+    </div>
+    <div class="activity_previous-timeframe">
+      <p class="time-window">${previousTimeframe}</p>
+      <p>-</p>
+      <p class="time">${timeframeData.previous}hrs</p>
+    </div>
+  </div>
+*//*# sourceMappingURL=style.css.map */
