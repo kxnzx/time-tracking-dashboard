@@ -1,4 +1,3 @@
-/*
 // Include the JSON data in JS:
 let data = [
   {
@@ -174,4 +173,3 @@ buttons.forEach((btn) => {
 });
 
 buttons[1].click();
-*/
