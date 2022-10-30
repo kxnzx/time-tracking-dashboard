@@ -34,6 +34,8 @@ Users should be able to:
 
 ## My process
 
+**\*\***\*\*\***\*\*** JAVASCRIPT IS STILL UNDER CONSTRUCTION **\*\***\*\*\***\*\***
+
 ### Built with
 
 - Semantic HTML5 markup
