@@ -26,6 +26,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot.jpg)
+**\*\***\*\*\***\*\*** JAVASCRIPT IS STILL UNDER CONSTRUCTION **\*\***\*\*\***\*\***
 
 ### Links
 
