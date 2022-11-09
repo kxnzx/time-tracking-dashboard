@@ -140,6 +140,9 @@ body {
 .id > nav button:hover {
   color: #fff;
 }
+.id > nav button:active {
+  color: white;
+}
 @media screen and (min-width: 1024px) {
   .id > nav {
     flex-direction: column;

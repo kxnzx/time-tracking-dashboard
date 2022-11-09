@@ -25,51 +25,48 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+#### Screensize 1440px - Desktop
+
+![Desktop](./images/Desktop.gif)
+
+#### Screensize 375px - Mobile
+
+![Mobile](./images/Mobile.gif)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://kxnzx.github.io/time-tracking-dashboard/)
+- View my Solution on [Frontend Mentor](https://www.frontendmentor.io/solutions/time-tracking-dashboard-with-vanilla-javascript-83LpYG2Inf)
+- View the [Live Site](https://kxnzx.github.io/time-tracking-dashboard/)
 
 ## My process
+
+- HTML semantics
+- Set variables
+- Reset default settings
+- Styles (Mobile First)
+- JavaScript
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
+- JavaScript
+- SASS custom properties
 - CSS Grid
+- CSS Flexbox
 - Mobile-first workflow
+- JSON
 
 ### What I learned
 
-Using data-\*
-
-The data-\* attribute adds custom information to a <button> element.
-
-- The \* part is replaced with a lowercase string, such as data-id, data-type, data-inventory, etc.
-
-- A <button> element can have any number of data-\* attributes, each with their own name.
-
-- Using data-\* attributes reduces the need for requests to the server.
+I have learned how to add custom data to a <button> element with the data-\* attribute.
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+<!-- Data-* attribute attaches data to the button -->
+<button data-frequency="daily" class="btn">Daily</button>
+<button data-frequency="weekly" class="btn">Weekly</button>
+<button data-frequency="monthly" class="btn">Monthly</button>
 ```
 
 ## Author
