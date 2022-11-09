@@ -140,7 +140,7 @@ body {
 .id > nav button:hover {
   color: #fff;
 }
-.id > nav button:active {
+.id > nav .active {
   color: white;
 }
 @media screen and (min-width: 1024px) {
