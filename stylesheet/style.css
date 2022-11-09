@@ -357,33 +357,4 @@ footer a {
           </div>
         </div>
       </section>
-*/
-/*
- <div class="activity_bg">
-    <img src="./images/icon-${activityClass}.svg" alt="" />
-  </div>
-  <div class="activity_info">
-    <!-- Header -->
-    <header class="activity_header">
-      <h2 class="activity_name">${name}</h2>
-      <div class="activity_options">
-        <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-            fill="#BBC0FF"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </div>
-    </header>
-    <!-- Times frames -->
-    <div class="activity_timeframes">
-      <h3 class="activity_current-timeframe">${timeframeData.current}hrs</h3>
-    </div>
-    <div class="activity_previous-timeframe">
-      <p class="time-window">${previousTimeframe}</p>
-      <p>-</p>
-      <p class="time">${timeframeData.previous}hrs</p>
-    </div>
-  </div>
 *//*# sourceMappingURL=style.css.map */

@@ -1,4 +1,3 @@
-/*
 // Include the JSON data in JS:
 let data = [
   {
@@ -139,27 +138,27 @@ const renderCards = (clickedOption) => {
   // Looping through all the data
   data.forEach((activity) => {
     const name = activity.title; // This grabs the titles Work, Play, Study etc.
-    const activityClass = name.toLocaleLowerCase().replace(" ", "-"); // Replace the space in between "Self Care" with a dash, because it's not possible to grab words with spaces
+    const activityClass = name.toLocaleLowerCase().replace(" ", ""); // Replace the space in between "Self Care" with a dash, because it's not possible to grab words with spaces
     const timeframeData = activity.timeframes[clickedOption];
     const previousTimeframe = calcTimeframe(clickedOption);
-    const main = document.createElement("main"); // This will create a main in HTML
-    main.classList.add(".grid-item", activityClass); // activityClass is for example Work, Play etc.
+    const section = document.createElement("section"); // This will create a main in HTML
+    section.className = `grid-item icon ${activityClass}`; // activityClass is for example Work, Play etc.
     //console.log();
     // This will be appended to HTML (USE BACKTICK``):
     const stringToInject = ` 
-    <div class="stats-card">
-    <div class="category">
-      <h2>${name}</h2>
-    </div>
-    <div class="time-tracker">
-      <p>${timeframeData.current}hrs</p>
-      <p>${previousTimeframe} - ${timeframeData.previous}hrs</p>
-    </div>
-  </div>
+      <div class="stats-card">
+        <div class="category">
+          <h2>${name}</h2>
+        </div>
+        <div class="time-tracker">
+          <p>${timeframeData.current}hrs</p>
+          <p>${previousTimeframe} - ${timeframeData.previous}hrs</p>
+        </div>
+      </div>
    `;
     // Add the above into the main in HTML
-    main.innerHTML = stringToInject;
-    activityTracker.append(main);
+    section.innerHTML = stringToInject;
+    activityTracker.append(section);
   });
 };
 
@@ -168,10 +167,11 @@ buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
     // When you click on the button it's going to run 2 functions
     activateClickedButton(btn);
+
     const clickedOption = btn.dataset.frequency; // It will grab the data of daily, weekly and monthly
+    // let clickedOption = "daily";
     renderCards(clickedOption);
   });
 });
 
 buttons[1].click();
-*/
