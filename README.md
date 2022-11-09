@@ -26,7 +26,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot.jpg)
-**\*\***\*\*\***\*\*** JAVASCRIPT IS STILL UNDER CONSTRUCTION **\*\***\*\*\***\*\***
 
 ### Links
 
@@ -34,8 +33,6 @@ Users should be able to:
 - Live Site URL: [Add live site URL here](https://kxnzx.github.io/time-tracking-dashboard/)
 
 ## My process
-
-**\*\***\*\*\***\*\*** JAVASCRIPT IS STILL UNDER CONSTRUCTION **\*\***\*\*\***\*\***
 
 ### Built with
 
