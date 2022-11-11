@@ -138,12 +138,12 @@ const renderCards = (clickedOption) => {
   // Looping through all the data
   data.forEach((activity) => {
     const name = activity.title; // This grabs the titles Work, Play, Study etc.
-    const activityClass = name.toLocaleLowerCase().replace(" ", ""); // Replace the space in between "Self Care" with a dash, because it's not possible to grab words with spaces
+    const activityClass = name.toLocaleLowerCase().replace(" ", ""); // Set to lowerCase and Replace the space in between "self care" with a putting the words together (concatenation) "selfcare", because it's not possible to grab words with spaces
     const timeframeData = activity.timeframes[clickedOption];
     const previousTimeframe = calcTimeframe(clickedOption);
-    const section = document.createElement("section"); // This will create a main in HTML
-    section.className = `grid-item icon ${activityClass}`; // activityClass is for example Work, Play etc.
-    //console.log();
+    const section = document.createElement("section"); // This will create a section in HTML
+    section.className = `grid-item icon ${activityClass}`; // activityClass are the titles in JSON: Work, Play etc. The classes in CSS have the same name, but the in lowerCase and without spaces.
+    console.log(section);
     // This will be appended to HTML (USE BACKTICK``):
     const stringToInject = ` 
       <div class="stats-card">
@@ -167,9 +167,7 @@ buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
     // When you click on the button it's going to run 2 functions
     activateClickedButton(btn);
-
     const clickedOption = btn.dataset.frequency; // It will grab the data of daily, weekly and monthly
-    // let clickedOption = "daily";
     renderCards(clickedOption);
   });
 });
